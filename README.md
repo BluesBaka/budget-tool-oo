@@ -14,9 +14,9 @@ The below are the methods that must be present on your models. Feel free to buil
 
 A customer is initialized with a name as a string. A name **cannot** be changed after it is initialized.
 
-+ `Customer#name`
+X `Customer#name`
   + Returns the name of the Customer as a string
-+ `Customer.all`
+X `Customer.all`
   + Returns an array of all Customer instances
 
 ---
@@ -25,13 +25,13 @@ A customer is initialized with a name as a string. A name **cannot** be changed 
 
 An transaction is initialized with an customer as a Customer object, a location as a Location object, and amount as a number. A transaction **cannot** change its customer or location after it is has been initialized.
 
-+ `Transaction.all`
+X `Transaction.all`
   + Returns an array of all Transaction instances
-+ `Transaction#customer`
+X `Transaction#customer`
   + Returns the customer for that given Transaction
-+ `Transaction#location`
+X `Transaction#location`
   + Returns the location for that given transaction
-+ `Transaction#amount`
+X `Transaction#amount`
   + Returns the amount spent on that given transaction
 
 ---
@@ -40,9 +40,9 @@ An transaction is initialized with an customer as a Customer object, a location 
 
 A location is initialized with a name as a string. The name of the location **can be** changed after being initialized.
 
-+ `Location#name`
+X `Location#name`
   + Returns the name of this location
-+ `Location.all`
+X `Location.all`
   + Returns an array of all Location instances
 
 ---
@@ -51,18 +51,19 @@ A location is initialized with a name as a string. The name of the location **ca
 
 #### `Customer`
 
-+ `Customer#transactions`
+
+X `Customer#transactions`
   + Returns an array of the transactions associated with that customer
-+ `Customer#locations`
+X `Customer#locations`
   + Returns an array of location instances that a customer has shopped at
-+ `Customers#total_spent`
-  + totals and returns the total amount that a user has spent at various locations 
+X `Customers#total_spent`
+  + totals and returns the total amount that a user has spent at various locations
 
 #### `Location`
 
-+ `Location#transactions`
+X `Location#transactions`
   + Returns an array of the transactions associated with that location
-+ `Location#customers`
+X `Location#customers`
   + Returns an array of customer instances who have purchased from this location
 + `Location#unique_customers`
   + Returns an array of all unique customers (ex: if someone has purchased from here more than once, they would still only show once in this array. There is Ruby method that does this for you that you can google for)
