@@ -1,6 +1,6 @@
 class Customer
-  attr_reader :name
-  @@all = []
+attr_reader :name
+@@all = []
 
   def initialize(name)
     @name = name
@@ -23,20 +23,13 @@ class Customer
     end
   end
 
-  def amounts
-    transactions.collect do |transaction|
-      transaction.amount
-    end
-  end
-
   def total_spent
-    total_spent = 0
-    amounts.each do |amount|
-      total_spent += amount
+    amount = 0
+    transactions.select do |transaction|
+      amount += transaction.amount
     end
-    total_spent
+    amount
   end
-
 
 
 end

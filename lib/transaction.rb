@@ -1,8 +1,7 @@
 class Transaction
-  attr_reader :customer, :location
-  attr_accessor :amount
-
-  @@all = []
+attr_reader :customer, :location
+attr_accessor :amount
+@@all = []
 
   def initialize(customer, location, amount)
     @customer = customer
@@ -14,5 +13,7 @@ class Transaction
   def self.all
     @@all
   end
+
+
 
 end

@@ -1,6 +1,6 @@
 class Location
-  attr_accessor :name
-  @@all = []
+attr_reader :name
+@@all = []
 
   def initialize(name)
     @name = name
@@ -18,14 +18,14 @@ class Location
   end
 
   def customers
-    transactions.select do |transaction|
+    transactions.collect do |transaction|
       transaction.customer
     end
   end
 
   def unique_customers
     customers.uniq
-    end
   end
+
 
 end
